@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore AWS Lambda, serverless computing, API Gateway and serverless application architecture.">
+    <title>AWS Lambda | Serverless Computing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">Cloud<span>Sphere</span></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#serverless">Serverless</a></li>
+                <li><a href="#lambda">Lambda</a></li>
+                <li><a href="#gateway">API Gateway</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#demo" class="nav-button">Try Demo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="badge">AWS CLOUD TECHNOLOGY</span>
+                <h1>Build Without <span>Managing Servers.</span></h1>
+                <p>
+                    Discover the power of serverless computing with AWS Lambda
+                    and Amazon API Gateway. Build scalable applications with
+                    less infrastructure management.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#serverless" class="primary-btn">Explore Technology</a>
+                    <a href="#architecture" class="secondary-btn">View Architecture</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>Serverless</h3>
+                        <p>Computing</p>
+                    </div>
+                    <div>
+                        <h3>Event Driven</h3>
+                        <p>Execution</p>
+                    </div>
+                    <div>
+                        <h3>Scalable</h3>
+                        <p>Applications</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="terminal-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="terminal-content">
+                    <p class="terminal-label">SERVERLESS RESPONSE</p>
+                    <p><span class="purple">function</span> lambdaHandler() {</p>
+                    <p class="indent"><span class="blue">return</span> {</p>
+                    <p class="indent">status: <span class="green">"success"</span>,</p>
+                    <p class="indent">message: <span class="green">"Hello AWS!"</span></p>
+                    <p class="indent">};</p>
+                    <p>}</p>
+                    <div class="terminal-status">● Function executed successfully</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="serverless">
+            <div class="section-heading">
+                <span class="section-tag">01 / INTRODUCTION</span>
+                <h2>What is <span>Serverless Computing?</span></h2>
+                <p>
+                    Serverless computing allows developers to build and run
+                    applications without directly managing servers.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Automatic Scaling</h3>
+                    <p>Applications can automatically scale according to incoming requests.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="icon">💰</div>
+                    <h3>Cost Efficiency</h3>
+                    <p>Pay based on resource consumption and configured service pricing.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="icon">🛠️</div>
+                    <h3>Less Maintenance</h3>
+                    <p>AWS manages the underlying server infrastructure.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="icon">🔄</div>
+                    <h3>Event Driven</h3>
+                    <p>Functions execute when events or requests trigger them.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section dark-section" id="lambda">
+            <div class="section-heading">
+                <span class="section-tag">02 / COMPUTE SERVICE</span>
+                <h2>Introducing <span>AWS Lambda</span></h2>
+                <p>
+                    AWS Lambda is a serverless computing service that executes
+                    code in response to events without requiring server management.
+                </p>
+            </div>
+
+            <div class="lambda-layout">
+                <div class="lambda-info">
+                    <h3>How Lambda Works</h3>
+                    <div class="step">
+                        <span>01</span>
+                        <div>
+                            <h4>Create a Function</h4>
+                            <p>Write your application code using a supported runtime.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span>02</span>
+                        <div>
+                            <h4>Receive an Event</h4>
+                            <p>A request or AWS service event triggers the function.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span>03</span>
+                        <div>
+                            <h4>Execute Code</h4>
+                            <p>Lambda runs the function to process the incoming event.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span>04</span>
+                        <div>
+                            <h4>Return a Response</h4>
+                            <p>The function returns the result or sends it to another service.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="runtime-card">
+                    <h3>Supported Runtimes</h3>
+                    <div class="runtime-list">
+                        <div><span>🐍</span> Python</div>
+                        <div><span>🟨</span> Node.js</div>
+                        <div><span>☕</span> Java</div>
+                        <div><span>🔷</span> C#</div>
+                        <div><span>🐹</span> Go</div>
+                        <div><span>💎</span> Ruby</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="gateway">
+            <div class="section-heading">
+                <span class="section-tag">03 / API MANAGEMENT</span>
+                <h2>Amazon <span>API Gateway</span></h2>
+                <p>
+                    API Gateway provides an entry point for applications to
+                    communicate with backend services such as AWS Lambda.
+                </p>
+            </div>
+
+            <div class="gateway-grid">
+                <article class="gateway-card">
+                    <div class="icon">🌐</div>
+                    <h3>REST API</h3>
+                    <p>Build resource-based APIs using HTTP methods.</p>
+                    <span class="small-label">API MANAGEMENT</span>
+                </article>
+
+                <article class="gateway-card">
+                    <div class="icon">⚙️</div>
+                    <h3>HTTP API</h3>
+                    <p>Create lightweight HTTP APIs with backend integrations.</p>
+                    <span class="small-label">HTTP INTEGRATION</span>
+                </article>
+
+                <article class="gateway-card">
+                    <div class="icon">🔗</div>
+                    <h3>WebSocket API</h3>
+                    <p>Support two-way communication between clients and servers.</p>
+                    <span class="small-label">REAL-TIME COMMUNICATION</span>
+                </article>
+            </div>
+
+            <div class="methods">
+                <h3>Common HTTP Methods</h3>
+                <div class="method-list">
+                    <span class="get">GET</span>
+                    <span class="post">POST</span>
+                    <span class="put">PUT</span>
+                    <span class="delete">DELETE</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section architecture-section" id="architecture">
+            <div class="section-heading">
+                <span class="section-tag">04 / SYSTEM DESIGN</span>
+                <h2>Serverless <span>Architecture</span></h2>
+                <p>Understand how API Gateway and Lambda work together.</p>
+            </div>
+
+            <div class="architecture">
+                <div class="architecture-box">
+                    <div class="architecture-icon">👤</div>
+                    <h3>Client</h3>
+                    <p>Sends an HTTP request</p>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-box">
+                    <div class="architecture-icon">🌐</div>
+                    <h3>API Gateway</h3>
+                    <p>Receives API requests</p>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-box">
+                    <div class="architecture-icon">λ</div>
+                    <h3>AWS Lambda</h3>
+                    <p>Executes application code</p>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-box">
+                    <div class="architecture-icon">📦</div>
+                    <h3>JSON Response</h3>
+                    <p>Returns processed data</p>
+                </div>
+            </div>
+
+            <div class="architecture-note">
+                <strong>Workflow:</strong>
+                Client Request → API Gateway → Lambda Function → JSON Response
+            </div>
+        </section>
+
+        <section class="section demo-section" id="demo">
+            <div class="section-heading">
+                <span class="section-tag">05 / INTERACTIVE DEMO</span>
+                <h2>Try a <span>Serverless API</span></h2>
+                <p>
+                    Simulate a simple API response to understand how a serverless
+                    endpoint returns JSON data.
+                </p>
+            </div>
+
+            <div class="demo-container">
+                <div class="demo-header">
+                    <span class="online-dot"></span>
+                    Serverless API Simulator
+                    <span class="demo-method">GET</span>
+                </div>
+
+                <div class="endpoint">
+                    <span>Endpoint</span>
+                    <code>/welcome</code>
+                </div>
+
+                <button class="run-btn" id="runDemo">▶ Run API Request</button>
+
+                <div class="response-area">
+                    <div class="response-heading">
+                        <span>RESPONSE OUTPUT</span>
+                        <span id="responseStatus">Waiting for request</span>
+                    </div>
+
+                    <pre id="responseOutput">{
+  "message": "Click Run API Request to start",
+  "status": "waiting"
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section security-section">
+            <div class="section-heading">
+                <span class="section-tag">06 / BEST PRACTICES</span>
+                <h2>Serverless <span>Security</span></h2>
+                <p>Important security practices when developing AWS applications.</p>
+            </div>
+
+            <div class="security-grid">
+                <div class="security-item">
+                    <span>01</span>
+                    <div>
+                        <h3>IAM Permissions</h3>
+                        <p>Follow least-privilege access when assigning permissions.</p>
+                    </div>
+                </div>
+
+                <div class="security-item">
+                    <span>02</span>
+                    <div>
+                        <h3>API Authentication</h3>
+                        <p>Configure appropriate authentication and authorization.</p>
+                    </div>
+                </div>
+
+                <div class="security-item">
+                    <span>03</span>
+                    <div>
+                        <h3>Secure Credentials</h3>
+                        <p>Never store passwords or secret keys directly in source code.</p>
+                    </div>
+                </div>
+
+                <div class="security-item">
+                    <span>04</span>
+                    <div>
+                        <h3>Monitoring</h3>
+                        <p>Use AWS monitoring services to identify errors and unusual activity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Build Smarter Cloud Applications</h2>
+            <p>Explore serverless technology and develop scalable cloud solutions using AWS.</p>
+            <a href="#home" class="primary-btn">Back to Top ↑</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#" class="logo">Cloud<span>Sphere</span></a>
+        <p>AWS Lambda & Serverless Computing</p>
+        <p class="copyright">© 2026 CloudSphere. Educational Project.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
